@@ -7,27 +7,41 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
+
+    Button lista_miejsc_btn;
+    Button zmien_miejsce_btn;
+    TextView miasto;
+    TextView dodatkowe_info;
+    EditText podanemiejsce;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        lista_miejsc_btn = (Button) findViewById(R.id.lista_miejsc_btn);
+        zmien_miejsce_btn = (Button) findViewById(R.id.zmien_miejsce_btn);
+        miasto = (TextView) findViewById(R.id.miasto);
+        dodatkowe_info = (TextView) findViewById(R.id.dodatkowe_info);
+        podanemiejsce = (EditText) findViewById(R.id.podanemiejsce);
+        zmien_miejsce_btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+
+                miasto.setText(podanemiejsce.getText().toString());
+
+
+            }
+        });
     }
-    public void PobierzDane (View view) {
-        Button listamiejsc = (Button) findViewById(R.id.listamiejsc);
-        Button zmianamiejsca = (Button) findViewById(R.id.zmianamiejsca);
-        TextView miasto = (TextView) findViewById(R.id.miasto);
-        TextView dodatkowe_info = (TextView) findViewById(R.id.dodatkowe_info);
-        EditText podanemiejsce = (EditText) findViewById(R.id.podanemiejsce);
-
-        
 
 
-        if(zmianamiejsca.isPressed())
-        {
-            miasto.setText(podanemiejsce.getText());
-        }
-    }
+
 
 }
