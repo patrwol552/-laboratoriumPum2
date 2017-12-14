@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity
         miasto = (TextView) findViewById(R.id.miasto);
         dodatkowe_info = (TextView) findViewById(R.id.dodatkowe_info);
         podanemiejsce = (EditText) findViewById(R.id.podanemiejsce);
+
+
         final Intent i = new Intent(this, ActivityOfCities.class);
-
-
 
         lista_miejsc_btn.setOnClickListener(new View.OnClickListener()
 
