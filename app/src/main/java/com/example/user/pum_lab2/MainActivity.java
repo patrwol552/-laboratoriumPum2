@@ -1,6 +1,6 @@
 package com.example.user.pum_lab2;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity
         podanemiejsce = (EditText) findViewById(R.id.podanemiejsce);
         final Intent i = new Intent(this, ActivityOfCities.class);
 
+
+
         lista_miejsc_btn.setOnClickListener(new View.OnClickListener()
 
             {
@@ -55,7 +57,9 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-
+        Bundle bundle = new Bundle();
+        bundle.putString("Nasze miasto", podanemiejsce.getText().toString());
+        i.putExtras(bundle);
 
     }
 
