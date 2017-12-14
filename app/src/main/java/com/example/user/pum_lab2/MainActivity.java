@@ -1,5 +1,7 @@
 package com.example.user.pum_lab2;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,20 @@ public class MainActivity extends AppCompatActivity
         miasto = (TextView) findViewById(R.id.miasto);
         dodatkowe_info = (TextView) findViewById(R.id.dodatkowe_info);
         podanemiejsce = (EditText) findViewById(R.id.podanemiejsce);
+        final Intent i = new Intent(this, ActivityOfCities.class);
+
+        lista_miejsc_btn.setOnClickListener(new View.OnClickListener()
+
+            {
+                @Override
+                public void onClick (View view){
+
+                    startActivity(i);
+
+
+            }
+            });
+
         zmien_miejsce_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -39,6 +55,8 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
+
+
     }
 
 
