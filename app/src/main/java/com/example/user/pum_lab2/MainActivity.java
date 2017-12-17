@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity
 
         final Intent i = new Intent(this, ActivityOfCities.class);
 
+        Bundle bundle = new Bundle();
+        bundle.putString("klucz", "miasto");
+        i.putExtras(bundle);
+
         lista_miejsc_btn.setOnClickListener(new View.OnClickListener()
 
             {
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity
                 public void onClick (View view){
 
                     startActivity(i);
+
 
 
             }
@@ -57,9 +62,7 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-        Bundle bundle = new Bundle();
-        bundle.putString("Nasze miasto", podanemiejsce.getText().toString());
-        i.putExtras(bundle);
+
 
     }
 

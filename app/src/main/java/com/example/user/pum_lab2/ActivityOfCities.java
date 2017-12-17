@@ -1,6 +1,8 @@
 package com.example.user.pum_lab2;
 
+
 import android.os.Bundle;
+
 
 public class ActivityOfCities extends MainActivity {
 
@@ -12,6 +14,15 @@ public class ActivityOfCities extends MainActivity {
         setContentView(R.layout.activity_of_cities);
 
 
-        
+
+
+
+
+
+
+
+
+
+
     }
 }
