@@ -12,21 +12,11 @@
     tools:context="com.example.user.pum_lab2.ActivityOfCities"
     >
 
+<android.support.v7.widget.RecyclerView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kliknąłeś w listę miejsc"
-            android:layout_gravity="center"
-            android:layout_margin="3dp"
-            android:textColor="@android:color/white"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lista jest aktualnie niedostępna"
-            android:layout_gravity="center"/>
+       
 
 
 </LinearLayout>
