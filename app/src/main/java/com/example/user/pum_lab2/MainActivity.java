@@ -11,15 +11,11 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity
 {
 
-    //Button lista_miejsc_btn;
-    //Button zmien_miejsce_btn;
-    //TextView miasto;
-    //TextView dodatkowe_info;
-    //EditText podanemiejsce;
 
     @BindView(R.id.lista_miejsc_btn)
     Button lista_miejsc_btn;
@@ -36,6 +32,26 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.podanemiejsce)
     EditText podanemiejsce;
 
+    @OnClick(R.id.lista_miejsc_btn)
+    void onClickLista()
+    {
+        final Intent i = new Intent(this, ActivityOfCities.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("klucz", "miasto");
+        i.putExtras(bundle);
+        startActivity(i);
+
+    }
+
+    @OnClick(R.id.zmien_miejsce_btn)
+    void onClickZmiana()
+    {
+
+        miasto.setText(podanemiejsce.getText().toString());
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -45,36 +61,6 @@ public class MainActivity extends AppCompatActivity
 
         ButterKnife.bind(this);
 
-        final Intent i = new Intent(this, ActivityOfCities.class);
-
-        Bundle bundle = new Bundle();
-        bundle.putString("klucz", "miasto");
-        i.putExtras(bundle);
-
-        lista_miejsc_btn.setOnClickListener(new View.OnClickListener()
-
-            {
-                @Override
-                public void onClick (View view){
-
-                    startActivity(i);
-
-
-
-            }
-            });
-
-        zmien_miejsce_btn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-
-                miasto.setText(podanemiejsce.getText().toString());
-
-
-            }
-        });
 
 
     }
