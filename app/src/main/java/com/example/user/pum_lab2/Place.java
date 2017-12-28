@@ -33,4 +33,11 @@ public class Place {
     public void setInformation(String information) {
         this.information = information;
     }
+
+    Place(String placeName, int temperature, String information)
+    {
+        this.placeName= placeName;
+        this.temperature=temperature;
+        this.information=information;
+    }
 }

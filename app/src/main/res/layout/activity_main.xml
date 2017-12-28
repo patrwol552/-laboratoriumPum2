@@ -79,4 +79,8 @@
         android:text="POKAŻ LISTĘ DOSTĘPNYCH MIEJSC"
         android:textColor="@android:color/holo_blue_light"/>
 
+
+
 </LinearLayout>
+
+

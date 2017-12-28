@@ -15,14 +15,5 @@ public class ActivityOfCities extends MainActivity {
 
 
 
-
-
-
-
-
-
-
-
-
     }
 }

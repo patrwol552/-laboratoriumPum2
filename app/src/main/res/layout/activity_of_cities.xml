@@ -12,6 +12,7 @@
     tools:context="com.example.user.pum_lab2.ActivityOfCities"
     >
 
+
 <android.support.v7.widget.RecyclerView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
