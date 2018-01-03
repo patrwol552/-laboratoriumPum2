@@ -19,16 +19,9 @@
         </activity>
 
 
-
         <activity
             android:name=".ActivityOfCities"
-            android:label="Aplikacja pogodowa">
-            <intent-filter>
-
-            <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-
-        </activity>
+            android:label="Aplikacja pogodowa"></activity>
     </application>
 
 </manifest>

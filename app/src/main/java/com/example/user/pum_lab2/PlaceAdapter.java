@@ -1,14 +1,10 @@
 package com.example.user.pum_lab2;
 
-import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
-
-import butterknife.BindView;
 
 
 /**
@@ -24,26 +20,33 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>
         this.places = places;
     }
 
-    @BindView(R.id.recyclerView)
-    RecyclerView recyclerView;
-
-
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View itemLayoutView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_from_list, null);
+        return new ViewHolder(itemLayoutView);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.getItemId();
+
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return places.size();
     }
 
+    public ArrayList<Place> getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(ArrayList<Place> places) {
+        this.places = places;
+    }
 
 
     class ViewHolder extends RecyclerView.ViewHolder
@@ -51,6 +54,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>
 
         public ViewHolder(View itemView) {
             super(itemView);
+
         }
 
 
@@ -58,5 +62,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>
 
 
 }
+
+
 
 
