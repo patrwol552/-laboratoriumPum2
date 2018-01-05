@@ -1,21 +1,31 @@
 package com.example.user.pum_lab2;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class ActivityOfCities extends MainActivity {
 
+   // @BindView(R.id.recycler)
+   // RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_of_cities);
-        //ButterKnife.bind(this);
+       // ButterKnife.bind(this);
 
-        ArrayList<Place> places = new ArrayList<>();
-        places.add(new Place("Szczecin", 16, "Częściowe zachmurzenie"));
-        places.add(new Place("Kraków", 12, "Możliwe opady"));
 
+
+
+       // RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        //recyclerView.setLayoutManager(layoutManager);
+
+        //PlaceAdapter placeAdapter = new PlaceAdapter(places);
+        //recyclerView.setAdapter(placeAdapter);
     }
 }

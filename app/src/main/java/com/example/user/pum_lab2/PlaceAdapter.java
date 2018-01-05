@@ -32,7 +32,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.getItemId();
 
-
     }
 
     @Override
