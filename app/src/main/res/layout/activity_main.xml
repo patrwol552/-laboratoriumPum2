@@ -23,6 +23,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
+        android:id="@+id/obrazek"
         android:src="@drawable/ic_wb_sunny_black_24dp" />
 
     <TextView

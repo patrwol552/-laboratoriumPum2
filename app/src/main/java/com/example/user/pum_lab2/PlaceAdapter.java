@@ -65,6 +65,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
 
     class ViewHolder extends RecyclerView.ViewHolder {
+
         @BindView(R.id.placename)
         TextView placename;
 

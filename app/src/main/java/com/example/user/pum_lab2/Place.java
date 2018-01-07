@@ -41,3 +41,4 @@ public class Place {
         this.information=information;
     }
 }
+
