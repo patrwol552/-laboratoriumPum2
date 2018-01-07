@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:id="@+id/stopnie"
         android:text="30 stopni Celsjusza"
         android:layout_margin="3dp"
         android:textColor="@android:color/white"/>

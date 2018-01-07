@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,19 +29,30 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.podanemiejsce)
     EditText podanemiejsce;
 
-    @OnClick(R.id.lista_miejsc_btn)
-    void onClickLista() {
-        final Intent i = new Intent(this, ActivityOfCities.class);
+    @BindView(R.id.stopnie)
+    TextView stopnie;
 
-        Bundle bundle = new Bundle();
-        bundle.putString("klucz", "miasto");
-        i.putExtras(bundle);
-        startActivity(i);
+    //@OnClick(R.id.lista_miejsc_btn)
+    //void onClickLista() {
+    // final Intent i = new Intent(this, Main2Activity.class);
+
+    //  Bundle bundle = new Bundle();
+    // bundle.putString("klucz", "miasto");
+    //  i.putExtras(bundle);
+    //  startActivity(i);
+
+    // }
+
+    @OnClick(R.id.lista_miejsc_btn)
+    public void WyswietlListe() {
+        Intent aktywnoscListy = new Intent(this, Main2Activity.class);
+        startActivity(aktywnoscListy);
 
     }
 
     @OnClick(R.id.zmien_miejsce_btn)
     void onClickZmiana() {
+
 
         miasto.setText(podanemiejsce.getText().toString());
 
@@ -52,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        Bundle wybranemiasto = getIntent().getExtras();
+        if (wybranemiasto != null) {
+            String miasto = wybranemiasto.getString("miasto");
+            this.miasto.setText(miasto);
+
+            String informacje = wybranemiasto.getString("info");
+            this.dodatkowe_info.setText(informacje);
+
+            int temperatura = wybranemiasto.getInt("temp");
+            this.stopnie.setText(temperatura + "stopni Celsjusza");
+
+        }
 
 
     }
